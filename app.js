@@ -1,16 +1,26 @@
 // Please follow the branches for further topics
-// 8. Creating Read Streams
-let http = require('http')
-let {createReadStream} = require('fs')
+// 9. Creating Write Stream
 
-// Read Stream
+let http = require('http')
+let {createReadStream, createWriteStream} = require('fs')
+
+// Write and Read Stream
 let myReadStream = createReadStream(__dirname + '/readMe.txt', 'utf8')
+let myWriteStream = createWriteStream(__dirname + '/writeMe.txt')
 
 // On read data
 myReadStream.on('data', (chunk)=>{
-    console.log('new chunk recieved:');
-    console.log(chunk)
+    // Chunk recieved
+    console.log('new chunk recieved');
+    myWriteStream.write(chunk, (err)=>{
+        if (err) console.log('err',err);
+    })
 })
+
+
+
+
+
 
 /*
 const { createServer } = require('http')
