@@ -1,7 +1,16 @@
 // Please follow the branches for further topics
 // 8. Creating Read Streams
+let http = require('http')
+let {createReadStream} = require('fs')
 
+// Read Stream
+let myReadStream = createReadStream(__dirname + '/readMe.txt', 'utf8')
 
+// On read data
+myReadStream.on('data', (chunk)=>{
+    console.log('new chunk recieved:');
+    console.log(chunk)
+})
 
 /*
 const { createServer } = require('http')
