@@ -1,5 +1,5 @@
 // Please follow the branches for further topics
-// 10. Pipes (Automate Listen Events)
+// 11. Serving HTML Pages
 
 let { createServer } = require("http");
 let { createReadStream, createWriteStream } = require("fs");
@@ -11,10 +11,10 @@ let server = createServer((req, resp) => {
 
   // Create Headers
   // writeHead(status, Headers)
-  resp.writeHead(200, { "Content-Type": "text/plain" });
+  resp.writeHead(200, { "Content-Type": "text/html" });
 
   // Write and Read Stream
-  let myReadStream = createReadStream(__dirname + "/readMe.txt", "utf8");
+  let myReadStream = createReadStream(__dirname + "/index.html", "utf8");
 
   // On read data pipe
   myReadStream.pipe(resp); // Send Data to response
