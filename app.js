@@ -1,8 +1,8 @@
 // Please follow the branches for further topics
-// 11. Serving HTML Pages
+// 12. Serving JSON Data
 
 let { createServer } = require("http");
-let { createReadStream, createWriteStream } = require("fs");
+// let { c } = require("fs");
 
 // Create Server
 let server = createServer((req, resp) => {
@@ -11,13 +11,17 @@ let server = createServer((req, resp) => {
 
   // Create Headers
   // writeHead(status, Headers)
-  resp.writeHead(200, { "Content-Type": "text/html" });
+  resp.writeHead(200, { "Content-Type": "application/json" });
 
-  // Write and Read Stream
-  let myReadStream = createReadStream(__dirname + "/index.html", "utf8");
+  // Create the object you want to send
+  let data = {
+    name: "Junaid",
+    job: "developer",
+    age: 22,
+  };
 
-  // On read data pipe
-  myReadStream.pipe(resp); // Send Data to response
+  // Send after stringifying
+  resp.end(JSON.stringify(data));
 });
 
 // Specifying port
