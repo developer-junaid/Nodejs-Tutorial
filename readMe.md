@@ -1,4 +1,4 @@
-# Node Js Tutorial
+# Nodejs Tutorial
 
 ## Topics Covered
 ### Note: Use Branches To Navigate to specific topic
