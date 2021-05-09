@@ -13,3 +13,5 @@
 - Creating Read Stream
 - Creating Write Stream
 - Pipes
+- Serving HTML Pages
+- Serving JSON
