@@ -1,6 +1,7 @@
 # Nodejs Tutorial
 
 ## Topics Covered
+
 ### Note: Use Branches To Navigate to specific topic
 
 - Global Object
@@ -15,3 +16,5 @@
 - Pipes
 - Serving HTML Pages
 - Serving JSON
+- Routing
+- - Sending 404, homepages, JSON Pages to Routes
