@@ -1,5 +1,5 @@
 // Please follow the branches for further topics
-// 13. Express (Basic)
+// 14. Express (Route Params)
 const express = require("express");
 
 // Create express app
@@ -15,6 +15,12 @@ app.get("/", (req, res) => {
 app.get("/contact", (req, res) => {
   // Respond
   res.send("this is the contact page"); // Send String
+});
+
+// Dynamic route
+app.get("/profile/:id", (req, res) => {
+  // Respond
+  res.send(`You requested to see a profile with the id of ${req.params.id}`);
 });
 
 // Listen to port
