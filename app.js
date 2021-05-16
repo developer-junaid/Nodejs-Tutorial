@@ -1,23 +1,21 @@
 // Please follow the branches for further topics
-// 7. Creating Server
-const { createServer } = require('http')
+// 12. Basic Routing
+const { createServer } = require("http");
 
 // Create Server
-let server = createServer((req, resp)=>{
-    // When Request is made
-    console.log(`request was made from: ${req.url}`);
+let server = createServer((req, resp) => {
+  // When Request is made
+  console.log(`request was made from: ${req.url}`);
 
-    // Create Headers
-    // writeHead(status, Headers)
-    resp.writeHead(200, {'Content-Type':'text/plain'})
+  // Create Headers
+  // writeHead(status, Headers)
+  resp.writeHead(200, { "Content-Type": "text/plain" });
 
-    // Send response
-    resp.end('Hey Ninja !')
-
-})
-
+  // Send response
+  resp.end("Hey It's Junaid here !");
+});
 
 // Specifying port
 // listen(port, Ip) - localhost (127.0.0.1)
-server.listen(3000, '127.0.0.1')
+server.listen(3000, "127.0.0.1");
 console.log(`server listening to port ${3000}`);
