@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "a little express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developer-junaid/nodejs-tutorial.git"
+  },
+  "keywords": [
+    "fun",
+    "ninjas",
+    "express"
+  ],
+  "author": "junaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developer-junaid/nodejs-tutorial/issues"
+  },
+  "homepage": "https://github.com/developer-junaid/nodejs-tutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
