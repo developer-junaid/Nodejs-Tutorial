@@ -1,40 +1,39 @@
 // Please follow the branches for further topics
-// 17. Express (Query Strings)
-const express = require("express");
+// 18. Express (Handling POST Requests)
+const express = require("express"); // npm i express
+const bodyParser = require("body-parser"); // npm i body-parser
 
-// Create express app
-const app = express();
+const app = express(); // Set Middleware to assets request
 
-// Set view engine
-app.set("view engine", "ejs");
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-// Set Middleware to assets request
-app.use("/assets", express.static("assets"));
+app.set("view engine", "ejs"); // Set view engine
 
-// Get request
-// app.get(route, function)
+app.use("/assets", express.static("assets")); // Set Middleware to assets request
+
+// REQUESTS
+
 app.get("/", (req, res) => {
-  // Respond with html
-  res.render("index"); // Send html
+  res.render("index"); // Respond with html (ejs)
 });
 
 app.get("/contact", (req, res) => {
-  // Respond with html pass query
-  res.render("contact", { query: req.query }); // Send html
+  res.render("contact", { query: req.query }); // Respond with html (ejs) and pass query
+});
+
+app.post("/contact", urlencodedParser, (req, res) => {
+  res.render("contact-success", { data: req.body }); // Respond with html (ejs) and pass query
 });
 
 // Dynamic route
 app.get("/profile/:id", (req, res) => {
-  // Data
   var data = {
     age: 29,
     job: "ninja",
     hobbies: ["eating", "fighting", "reading"],
   };
 
-  // Respond with template
-  res.render("profile", { person: req.params.id, data });
+  res.render("profile", { person: req.params.id, data }); // Respond with template
 });
 
-// Listen to port
-app.listen(3000);
+app.listen(3000); // Listen to port
