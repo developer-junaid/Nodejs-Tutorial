@@ -1,5 +1,5 @@
 // Please follow the branches for further topics
-// 15. Express (Template Engines) EJS
+// 16. Express (Partial Templates) EJS
 const express = require("express");
 
 // Create express app
@@ -12,12 +12,12 @@ app.set("view engine", "ejs");
 // app.get(route, function)
 app.get("/", (req, res) => {
   // Respond with html
-  res.sendFile(__dirname + "/index.html"); // Send html
+  res.render("index"); // Send html
 });
 
 app.get("/contact", (req, res) => {
   // Respond with html
-  res.sendFile(__dirname + "/contact.html"); // Send html
+  res.render("contact"); // Send html
 });
 
 // Dynamic route
