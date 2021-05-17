@@ -18,3 +18,11 @@
 - Serving JSON
 - Routing
 - - Sending 404, homepages, JSON Pages to Routes
+- Express 
+- - Route Params
+- - Template Engines (EJS)
+- - Partial Templates
+- - Query Strings
+- - Handling POST Requests
+
+### I'm also making an example project of this tutorial on my repo "Nodejs-Todo-App"
