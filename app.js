@@ -8,6 +8,9 @@ const app = express();
 // Set view engine
 app.set("view engine", "ejs");
 
+// Set Middleware to assets request
+app.use("/assets", express.static("assets"));
+
 // Get request
 // app.get(route, function)
 app.get("/", (req, res) => {
