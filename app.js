@@ -26,6 +26,7 @@ app.get("/profile/:id", (req, res) => {
   var data = {
     age: 29,
     job: "ninja",
+    hobbies: ["eating", "fighting", "reading"],
   };
 
   // Respond with template
