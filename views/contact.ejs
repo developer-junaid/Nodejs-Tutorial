@@ -30,5 +30,21 @@
     <%- include('partials/nav.ejs') -%>
     <h1>Contact Us!</h1>
     <p>Contact the coolest cats on the web right here...!</p>
+    <!-- Form -->
+    <form id="contact-form">
+      <label for="who">Who do you want to contact?</label>
+      <input type="text" name="who" id="who" value="<%= query.person %> " />
+      <label for="department">Which department?</label>
+      <input
+        type="text"
+        name="department"
+        id="department"
+        value="<%= query.dept %> "
+      />
+      <label for="email">Your Email?</label>
+      <input type="email" name="email" id="email" />
+      <input type="submit" value="submit" />
+    </form>
+    <!-- // Form -->
   </body>
 </html>

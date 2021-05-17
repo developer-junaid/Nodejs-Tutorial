@@ -1,5 +1,5 @@
 // Please follow the branches for further topics
-// 16. Express (Partial Templates) EJS
+// 17. Express (Query Strings)
 const express = require("express");
 
 // Create express app
@@ -19,8 +19,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  // Respond with html
-  res.render("contact"); // Send html
+  // Respond with html pass query
+  res.render("contact", { query: req.query }); // Send html
 });
 
 // Dynamic route
